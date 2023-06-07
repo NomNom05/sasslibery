@@ -1,0 +1,130 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+html {
+    font-family: "montseratt", sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    border-bottom: 1px solid #e3e3e8;
+  }
+  
+  #logo {
+    float: left;
+    font-size: 3em;
+    margin: 0;
+    padding: 0.4em;
+    text-decoration: none;
+    color: rgb(20, 166, 177);
+    border-right: 1px solid #e3e3e8;
+    transition: 0.5s all;
+  
+    &:hover {
+      color: #fafafa;
+      background-color: #333;
+    }
+  }
+  
+  nav {
+    float: left;;
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 2.2em 2em;
+  
+      li {
+        display: inline;
+        padding: 0 0.4em;
+  
+        a {
+          color: #333;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 1.6em;
+          padding-bottom: 1.3em;
+          transition: 0.5s color;
+  
+          &:hover {
+            border-bottom: 3px solid #333;
+          }
+        }
+      }
+    }
+  }
+
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+
+section#home {
+    background: url(https://www.shopenauer.com/images/brands/b83/b_image_1471522895664.jpg) no-repeat center center/cover;;
+}
+section#about {
+    background: url(https://i.imgur.com/GsfPNe4.png) no-repeat center center/cover;;
+    $left-color: #000000; 
+
+    .paragraph {
+      text-align: center;
+      width: 300px;
+      background: rgba(48, 48, 48, 0.7);
+      display: flex;
+      align-items: flex-start; 
+      justify-content: center;      
+      .left {
+        color: white;
+        padding: 10px;
+
+        h1 {
+          font-size: 25px;
+          font-weight: 800;
+        }
+        p {
+          font-size: 15px;
+          font-weight: 300;
+        }
+      }
+        
+      .right {
+        color: #000000; 
+      }
+    }
+    
+
+}
+  
+
+section#types {
+    background: url(https://img.freepik.com/free-photo/beige-paper-background-simple-diy-craft_53876-132916.jpg)no-repeat center center/cover;;
+
+}
+
+.hat-home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 400px;
+        height: 400px;
+        margin-right: 10%;
+        @include spin;
+    }
+}
+
+
+
